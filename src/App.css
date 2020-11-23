@@ -1,38 +1,184 @@
-.App {
+body {
+  background: #f3f3f3;
+  color: #555555;
+}
+
+.main {
+  background: #ffffff;
+  padding: 25px;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 80vh;
+  margin: 10px auto;
+  box-shadow: 0px 6px 20px #333333;
+}
+
+header {
+  width: 100%;
+  text-align: left;
+  color: #555555;
+}
+header h1 {
+  font-size: 32px;
+  margin: 15px 0;
+}
+header h2 {
+  font-size: 24px;
+  margin: 0px 0 10px;
+  font-weight: 400;
+}
+
+section {
+  width: 100%;
+  margin: 20px 0;
+}
+
+section h3 {
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+.green {
+  color: #28ad00;
+}
+.red {
+  color: #ad0000;
+}
+
+.summary-data {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.summary-data .summary-data-block{
+  width: calc(33.333% - 1px);
+  margin: 0px;
+  padding: 30px 0;
+  display: inline-block;
   text-align: center;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.summary-data .summary-data-block:last-child {
+  border-right: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.summary-data .summary-data-block .big-num {
+  font-size: 3em;
+  font-weight: 400;
+  margin: 0px;
 }
+.summary-data .summary-data-block p {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0px;
+}
+.summary-data .summary-data-block p.title { font-weight: 600; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.regional-data {
+  width: 100%;
+  margin: 30px 0 0;
+  padding: 0px;
+}
+.regional-data .region-info-cont {
+  width: 100%;
+  margin: 0px;
+  padding: 30px 0;
+  display: block;
+}
+.regional-data .region-info-cont > div {
+  width: calc(100% - 20px);
+  margin: 0px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+}
+.regional-data .region-info-cont > div.region-info-labels { font-weight: 600; }
+.regional-data .region-info-cont > div > .region-name {
+  width: 60%;
+  margin: 0px;
+  padding: 5px 0;
+  display: flex;
+  text-align: left;
+  justify-content: left;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.regional-data .region-info-cont > div > .region-num {
+  width: 10%;
+  margin: 0px;
+  padding: 5px 0;
+  display: flex;
+  text-align: right;
+  justify-content: right;
+}
+.regional-data .region-info-cont > div > .region-name .graphshape {
+  width: 16px;
+  height: 16px;
+  margin: 0px 5px;
+  display: flex;
+}
+.regional-data .region-info-cont > div > .region-name .graphshape.rect {
+  border-radius: 0;
+}
+.regional-data .region-info-cont > div > .region-name .graphshape.circle {
+  border-radius: 50%;
+}
+.regional-data .region-info-cont > div > .region-name .graphshape.triangle {
+  width: 0px;
+  height: 0px;
+  background: none;
+  background-color: transparent !important;
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-bottom: 16px solid;
 }
 
-.App-link {
-  color: #61dafb;
+.industry-data {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.industry-data .industry-info-cont {
+  width: 100%;
+  margin: 0px;
+  padding: 30px 0;
+  display: block;
+}
+.industry-data .industry-info-cont > div {
+  width: calc(100% - 20px);
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+  position: relative;
+}
+.industry-data .industry-info-cont > div.industry-info-labels { font-weight: 600; }
+.industry-data .industry-info-cont > div > .industry-name {
+  width: 70%;
+  margin: 0px;
+  padding: 5px 0;
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+.industry-data .industry-info-cont > div.industry-info > .industry-name { color: #000dc9; }
+.industry-data .industry-info-cont > div > .industry-num {
+  width: 10%;
+  margin: 0px;
+  padding: 5px 0;
+  display: flex;
+  text-align: right;
+  justify-content: right;
+}
+.industry-data .industry-info-cont > div > .jobs-perc-bar {
+  background: rgba(31, 139, 255, 0.16);
+  height: 100%;
+  float: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
